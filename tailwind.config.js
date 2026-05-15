@@ -9,6 +9,7 @@ export default {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './node_modules/flowbite/**/*.js',
     ],
 
     theme: {
@@ -16,8 +17,27 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'neutral-primary-soft': '#f9fafb',
+                'neutral-primary-medium': '#f3f4f6',
+                'neutral-secondary-medium': '#e5e7eb',
+                'neutral-tertiary-medium': '#d1d5db',
+                'neutral-tertiary': '#9ca3af',
+                'default': '#e5e7eb',
+                'default-medium': '#d1d5db',
+                'heading': '#111827',
+                'body': '#4b5563',
+                'fg-brand': '#1d4ed8',
+                'fg-disabled': '#9ca3af',
+                'danger-soft': '#fee2e2',
+                'danger-subtle': '#fecaca',
+                'fg-danger-strong': '#b91c1c',
+            },
+            borderRadius: {
+                'base': '0.375rem',
+            }
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [forms, typography, require('flowbite/plugin')],
 };
