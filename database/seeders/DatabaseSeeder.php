@@ -54,6 +54,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             MaterialSeeder::class,
             PrinterSeeder::class,
+            CustomerSeeder::class,
         ]);
     }
 }

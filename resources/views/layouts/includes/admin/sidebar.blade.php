@@ -49,15 +49,24 @@
             </a>
          </li>
          <li>
-            <a href="#" class="sidebar-link flex items-center px-2 py-1.5 text-body rounded-base group">
+            <a href="{{ route('admin.printing.index') }}" 
+               class="sidebar-link flex items-center px-2 py-1.5 text-body rounded-base group {{ request()->routeIs('admin.printing.*') ? 'sidebar-active' : '' }}">
                <i class="fa-solid fa-print w-5 text-center transition duration-75"></i>
                <span class="flex-1 ms-3 whitespace-nowrap">Impresión</span>
             </a>
          </li>
          <li>
-            <a href="#" class="sidebar-link flex items-center px-2 py-1.5 text-body rounded-base group">
+            <a href="{{ route('admin.delivery.index') }}" 
+               class="sidebar-link flex items-center px-2 py-1.5 text-body rounded-base group {{ request()->routeIs('admin.delivery.*') ? 'sidebar-active' : '' }}">
                <i class="fa-solid fa-truck-fast w-5 text-center transition duration-75"></i>
                <span class="flex-1 ms-3 whitespace-nowrap">Envíos</span>
+            </a>
+         </li>
+         <li>
+            <a href="{{ route('admin.inventory.index') }}" 
+               class="sidebar-link flex items-center px-2 py-1.5 text-body rounded-base group {{ request()->routeIs('admin.inventory.*') ? 'sidebar-active' : '' }}">
+               <i class="fa-solid fa-boxes-stacked w-5 text-center transition duration-75"></i>
+               <span class="flex-1 ms-3 whitespace-nowrap">Inventario</span>
             </a>
          </li>
       </ul>
