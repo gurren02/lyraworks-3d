@@ -11,18 +11,21 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/01b3306851.js" crossorigin="anonymous"></script>
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased" style="background-color: #F9FAFB;">
         @include('layouts.includes.admin.navigation')
         @include('layouts.includes.admin.sidebar')
         
         <div class="p-4 sm:ml-64 mt-14">
-            <div class="p-4 border-1 border-default border-dashed rounded-base">
+            <div class="p-4 border-1 border-default border-dashed rounded-base" style="background-color: #F9FAFB;">
                 {{ $slot }}
             </div>
         </div>

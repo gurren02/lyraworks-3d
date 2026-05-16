@@ -1,4 +1,4 @@
-<nav class="fixed top-0 z-50 w-full bg-neutral-primary-soft border-b border-default">
+<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-center justify-between">
       <div class="flex items-center justify-start rtl:justify-end">
@@ -8,10 +8,10 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
             </svg>
          </button>
-        <a href="/" class="flex ms-2 md:me-24">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 me-3" alt="FlowBite Logo" />
-          <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">Lyraworks 3D</span>
-        </a>
+         <a href="/" class="flex ms-2 md:me-24">
+           <img src="{{ asset('images/logo.png') }}" class="h-8 me-3" alt="Lyraworks Logo" />
+           <span class="self-center text-lg whitespace-nowrap" style="color: #000000; font-weight: bold;">Lyraworks 3D</span>
+         </a>
       </div>
       <div class="flex items-center">
           <div class="flex items-center ms-3">

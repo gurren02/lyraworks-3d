@@ -13,8 +13,10 @@ class Printer extends Model
 
     protected $fillable = [
         'name',
+        'model',
         'technology',
         'status',
+        'last_maintenance',
     ];
 
     /**

@@ -11,8 +11,10 @@ return new class extends Migration
         Schema::create('printers', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
-            $table->enum('technology', ['FDM', 'SLA'])->default('FDM');
-            $table->enum('status', ['disponible', 'imprimiendo', 'mantenimiento'])->default('disponible');
+            $table->string('model', 100)->nullable();
+            $table->enum('technology', ['FDM', 'SLA', 'Resin'])->default('FDM');
+            $table->string('status')->default('available');
+            $table->timestamp('last_maintenance')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -13,6 +13,7 @@ class Material extends Model
 
     protected $fillable = [
         'name',
+        'type',
         'color',
         'stock_grams',
         'price_per_gram',
