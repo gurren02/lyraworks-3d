@@ -1,4 +1,17 @@
-<x-admin-layout>
+<x-admin-layout :breadcrumbs="[
+    [
+        'name' => 'Dashboard',
+        'href' => route('admin.dashboard')
+    ],
+    [
+        'name' => 'Usuarios',
+        'href' => route('admin.users.index')
+    ],
+    [
+        'name' => 'Crear Usuario',
+        'href' => route('admin.users.create')
+    ]
+]">
     <div class="mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Crear Nuevo Usuario</h2>
     </div>

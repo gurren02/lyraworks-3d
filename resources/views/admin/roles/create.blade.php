@@ -1,4 +1,17 @@
-<x-admin-layout>
+<x-admin-layout :breadcrumbs="[
+    [
+        'name' => 'Dashboard',
+        'href' => route('admin.dashboard')
+    ],
+    [
+        'name' => 'Roles',
+        'href' => route('admin.roles.index')
+    ],
+    [
+        'name' => 'Crear Rol',
+        'href' => route('admin.roles.create')
+    ]
+]">
     <div class="mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Crear Nuevo Rol</h2>
     </div>

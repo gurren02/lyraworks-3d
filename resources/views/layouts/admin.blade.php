@@ -25,6 +25,8 @@
         @include('layouts.includes.admin.sidebar')
         
         <div class="p-4 sm:ml-64 mt-14">
+            @include('layouts.includes.admin.breadcrumb')
+            
             <div class="p-4 border-1 border-default border-dashed rounded-base" style="background-color: #F9FAFB;">
                 {{ $slot }}
             </div>

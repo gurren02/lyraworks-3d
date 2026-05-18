@@ -9,11 +9,18 @@ use Illuminate\View\Component;
 class AdminLayout extends Component
 {
     /**
+     * The breadcrumbs array.
+     *
+     * @var array
+     */
+    public array $breadcrumbs;
+
+    /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(array $breadcrumbs = [])
     {
-        //
+        $this->breadcrumbs = $breadcrumbs;
     }
 
     /**

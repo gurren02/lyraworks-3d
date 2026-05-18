@@ -1,4 +1,17 @@
-<x-admin-layout>
+<x-admin-layout :breadcrumbs="[
+    [
+        'name' => 'Dashboard',
+        'href' => route('admin.dashboard')
+    ],
+    [
+        'name' => 'Inventario',
+        'href' => route('admin.inventory.index')
+    ],
+    [
+        'name' => 'Nueva Impresora',
+        'href' => route('admin.printers.create')
+    ]
+]">
     <div class="mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Nueva Impresora</h2>
     </div>

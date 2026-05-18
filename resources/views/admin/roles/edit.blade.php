@@ -1,4 +1,17 @@
-<x-admin-layout>
+<x-admin-layout :breadcrumbs="[
+    [
+        'name' => 'Dashboard',
+        'href' => route('admin.dashboard')
+    ],
+    [
+        'name' => 'Roles',
+        'href' => route('admin.roles.index')
+    ],
+    [
+        'name' => 'Editar Rol',
+        'href' => route('admin.roles.edit', $role)
+    ]
+]">
     <div class="mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Editar Rol: {{ $role->name }}</h2>
     </div>

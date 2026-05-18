@@ -1,4 +1,17 @@
-<x-admin-layout>
+<x-admin-layout :breadcrumbs="[
+    [
+        'name' => 'Dashboard',
+        'href' => route('admin.dashboard')
+    ],
+    [
+        'name' => 'Impresiones',
+        'href' => route('admin.printing.index')
+    ],
+    [
+        'name' => 'Editar Impresión',
+        'href' => route('admin.printing.edit', $printing)
+    ]
+]">
     <div class="mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Editar Impresión #{{ $printing->id }}</h2>
     </div>

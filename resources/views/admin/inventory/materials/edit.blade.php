@@ -1,4 +1,17 @@
-<x-admin-layout>
+<x-admin-layout :breadcrumbs="[
+    [
+        'name' => 'Dashboard',
+        'href' => route('admin.dashboard')
+    ],
+    [
+        'name' => 'Inventario',
+        'href' => route('admin.inventory.index')
+    ],
+    [
+        'name' => 'Editar Material',
+        'href' => route('admin.materials.edit', $material)
+    ]
+]">
     <div class="mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Editar Material: {{ $material->name }}</h2>
     </div>

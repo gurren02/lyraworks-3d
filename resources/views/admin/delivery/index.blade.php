@@ -1,4 +1,13 @@
-<x-admin-layout>
+<x-admin-layout :breadcrumbs="[
+    [
+        'name' => 'Dashboard',
+        'href' => route('admin.dashboard')
+    ],
+    [
+        'name' => 'Envíos',
+        'href' => route('admin.delivery.index')
+    ]
+]">
     <div class="flex justify-between items-center mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Gestión de Envíos</h2>
     </div>

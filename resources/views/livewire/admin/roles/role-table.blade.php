@@ -11,12 +11,9 @@
                         Nombre del Rol
                     </th>
                     <th scope="col" class="px-6 py-3 font-bold" style="background-color: #F9F3E9;">
-                        Guard
-                    </th>
-                    <th scope="col" class="px-6 py-3 font-bold">
                         Fecha Creación
                     </th>
-                    <th scope="col" class="px-6 py-3 font-bold" style="background-color: #F9F3E9;">
+                    <th scope="col" class="px-6 py-3 font-bold">
                         Acciones
                     </th>
                 </tr>
@@ -30,15 +27,10 @@
                     <td class="px-6 py-4" style="background-color: #F9FAFB;">
                         {{ $role->name }}
                     </td>
-                    <td class="px-6 py-4 font-medium" style="background-color: #F9F3E9;">
-                        <span class="px-2 py-1 bg-white/50 border border-gray-200 text-gray-800 text-xs font-semibold rounded-base uppercase">
-                            {{ $role->guard_name }}
-                        </span>
-                    </td>
-                    <td class="px-6 py-4" style="background-color: #F9FAFB;">
+                    <td class="px-6 py-4" style="background-color: #F9F3E9;">
                         {{ $role->created_at->format('d/m/Y') }}
                     </td>
-                    <td class="px-6 py-4" style="background-color: #F9F3E9;">
+                    <td class="px-6 py-4" style="background-color: #F9FAFB;">
                         <div class="flex space-x-3 justify-center">
                             <a href="{{ route('admin.roles.edit', $role) }}" class="text-blue-600 hover:text-blue-800 transition duration-150">
                                 <i class="fa-solid fa-pen-to-square"></i>

@@ -1,4 +1,17 @@
-<x-admin-layout>
+<x-admin-layout :breadcrumbs="[
+    [
+        'name' => 'Dashboard',
+        'href' => route('admin.dashboard')
+    ],
+    [
+        'name' => 'Envíos',
+        'href' => route('admin.delivery.index')
+    ],
+    [
+        'name' => 'Editar Envío',
+        'href' => route('admin.delivery.edit', $delivery)
+    ]
+]">
     <div class="mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Editar Envío #{{ $delivery->id }}</h2>
         <p class="text-sm text-gray-500">Vinculado a la impresión #{{ $delivery->print_job_id }}</p>
