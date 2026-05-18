@@ -33,7 +33,11 @@ class UserTable extends Component
         $user = User::find($userId);
         if ($user) {
             $user->delete();
-            session()->flash('success', 'Usuario eliminado correctamente.');
+            $this->dispatch('swal', [
+                'icon' => 'success',
+                'title' => 'Usuario Eliminado',
+                'text' => 'El usuario ha sido eliminado correctamente.'
+            ]);
         }
     }
 }

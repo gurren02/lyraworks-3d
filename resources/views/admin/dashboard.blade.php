@@ -31,7 +31,7 @@
         <!-- 1. Sección de KPIs / Tarjetas de Métricas (Inspirado en TailAdmin) -->
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-6">
             <!-- Impresiones Activas -->
-            <div style="background-color: #F9F3E9;" class="rounded-base border border-black p-5 shadow-sm md:p-6 transition hover:shadow-md duration-200">
+            <div style="background-color: #F9F3E9;" class="rounded-base border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:p-6 transition hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 duration-200">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center justify-center w-12 h-12 bg-white text-blue-600 border border-black rounded-xl">
                         <i class="fa-solid fa-print text-xl"></i>
@@ -49,7 +49,7 @@
             </div>
 
             <!-- Envíos Pendientes -->
-            <div style="background-color: #F9F3E9;" class="rounded-base border border-black p-5 shadow-sm md:p-6 transition hover:shadow-md duration-200">
+            <div style="background-color: #F9F3E9;" class="rounded-base border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:p-6 transition hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 duration-200">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center justify-center w-12 h-12 bg-white text-amber-600 border border-black rounded-xl">
                         <i class="fa-solid fa-truck-fast text-xl"></i>
@@ -67,7 +67,7 @@
             </div>
 
             <!-- Estado de Impresoras -->
-            <div style="background-color: #F9F3E9;" class="rounded-base border border-black p-5 shadow-sm md:p-6 transition hover:shadow-md duration-200">
+            <div style="background-color: #F9F3E9;" class="rounded-base border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:p-6 transition hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 duration-200">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center justify-center w-12 h-12 bg-white text-green-600 border border-black rounded-xl">
                         <i class="fa-solid fa-gears text-xl"></i>
@@ -85,7 +85,7 @@
             </div>
 
             <!-- Stock de Filamento/Resina -->
-            <div style="background-color: #F9F3E9;" class="rounded-base border border-black p-5 shadow-sm md:p-6 transition hover:shadow-md duration-200">
+            <div style="background-color: #F9F3E9;" class="rounded-base border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:p-6 transition hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 duration-200">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center justify-center w-12 h-12 bg-white text-rose-600 border border-black rounded-xl">
                         <i class="fa-solid fa-droplet text-xl"></i>
@@ -112,7 +112,7 @@
         <!-- 2. Gráfica Interactiva & Tabla de Logística Side-by-Side -->
         <div class="grid grid-cols-12 gap-6">
             <!-- Gráfica Interactiva (Col: 8) -->
-            <div style="background-color: #F9F3E9;" class="col-span-12 xl:col-span-8 rounded-base border border-black p-5 shadow-sm sm:p-6 flex flex-col justify-between">
+            <div style="background-color: #F9F3E9;" class="col-span-12 xl:col-span-8 rounded-base border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:p-6 flex flex-col justify-between transition hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 duration-200">
                 <div>
                     <div class="flex justify-between items-center mb-6">
                         <h3 class="text-lg font-bold text-black">Trabajos por Mes</h3>
@@ -124,7 +124,7 @@
             </div>
 
             <!-- Tabla de Logística (Col: 4) -->
-            <div style="background-color: #F9F3E9;" class="col-span-12 xl:col-span-4 rounded-base border border-black p-5 shadow-sm sm:p-6 flex flex-col justify-between">
+            <div style="background-color: #F9F3E9;" class="col-span-12 xl:col-span-4 rounded-base border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:p-6 flex flex-col justify-between transition hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 duration-200">
                 <div>
                     <div class="mb-4">
                         <h3 class="text-lg font-bold text-black">Próximos Envíos</h3>

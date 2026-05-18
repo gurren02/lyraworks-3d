@@ -33,7 +33,11 @@ class PrinterTable extends Component
         $printer = Printer::find($id);
         if ($printer) {
             $printer->delete();
-            session()->flash('success', 'Impresora eliminada correctamente.');
+            $this->dispatch('swal', [
+                'icon' => 'success',
+                'title' => 'Impresora Eliminada',
+                'text' => 'La impresora ha sido eliminada correctamente.'
+            ]);
         }
     }
 }

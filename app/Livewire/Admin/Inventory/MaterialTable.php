@@ -34,6 +34,11 @@ class MaterialTable extends Component
         $material = Material::find($id);
         if ($material) {
             $material->increment('stock_grams', 50);
+            $this->dispatch('swal', [
+                'icon' => 'success',
+                'title' => 'Stock Incrementado',
+                'text' => 'Se agregaron 50g al material ' . $material->name . '.'
+            ]);
         }
     }
 
@@ -42,6 +47,11 @@ class MaterialTable extends Component
         $material = Material::find($id);
         if ($material && $material->stock_grams >= 50) {
             $material->decrement('stock_grams', 50);
+            $this->dispatch('swal', [
+                'icon' => 'success',
+                'title' => 'Stock Reducido',
+                'text' => 'Se descontaron 50g del material ' . $material->name . '.'
+            ]);
         }
     }
 
@@ -50,7 +60,11 @@ class MaterialTable extends Component
         $material = Material::find($id);
         if ($material) {
             $material->delete();
-            session()->flash('success', 'Material eliminado correctamente.');
+            $this->dispatch('swal', [
+                'icon' => 'success',
+                'title' => 'Material Eliminado',
+                'text' => 'El material ha sido eliminado correctamente.'
+            ]);
         }
     }
 }

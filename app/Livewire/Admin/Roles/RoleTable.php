@@ -32,7 +32,11 @@ class RoleTable extends Component
         $role = Role::find($roleId);
         if ($role) {
             $role->delete();
-            session()->flash('success', 'Rol eliminado correctamente.');
+            $this->dispatch('swal', [
+                'icon' => 'success',
+                'title' => 'Rol Eliminado',
+                'text' => 'El rol ha sido eliminado correctamente.'
+            ]);
         }
     }
 }

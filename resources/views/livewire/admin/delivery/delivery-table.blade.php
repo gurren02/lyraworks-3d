@@ -5,7 +5,7 @@
                class="w-full md:w-1/3 rounded-base border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200">
     </div>
 
-    <div class="relative overflow-x-auto shadow-xs rounded-base border border-gray-200">
+    <div class="relative overflow-x-auto rounded-base border-2 border-black">
         <table class="w-full text-sm text-left rtl:text-right text-gray-700">
             <thead class="text-xs uppercase" style="background-color: #fcfaf5;">
                 <tr>

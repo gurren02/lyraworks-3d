@@ -43,7 +43,11 @@ class DeliveryTable extends Component
         $delivery = Delivery::find($id);
         if ($delivery) {
             $delivery->delete();
-            session()->flash('success', 'Envío eliminado correctamente.');
+            $this->dispatch('swal', [
+                'icon' => 'success',
+                'title' => 'Envío Eliminado',
+                'text' => 'El envío ha sido eliminado correctamente.'
+            ]);
         }
     }
 }

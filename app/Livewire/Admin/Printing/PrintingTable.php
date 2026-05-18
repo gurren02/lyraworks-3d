@@ -44,7 +44,11 @@ class PrintingTable extends Component
         $printJob = PrintJob::find($id);
         if ($printJob) {
             $printJob->delete();
-            session()->flash('success', 'Impresión eliminada correctamente.');
+            $this->dispatch('swal', [
+                'icon' => 'success',
+                'title' => 'Impresión Eliminada',
+                'text' => 'El trabajo de impresión ha sido eliminado correctamente.'
+            ]);
         }
     }
 }

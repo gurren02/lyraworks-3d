@@ -5,7 +5,7 @@
                class="w-full md:w-1/3 rounded-base border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200">
     </div>
 
-    <div class="relative overflow-x-auto shadow-xs rounded-base border border-gray-200">
+    <div class="relative overflow-x-auto rounded-base border-2 border-black">
         <table class="w-full text-sm text-left rtl:text-right text-gray-700">
             <thead class="text-xs uppercase" style="background-color: #fcfaf5;">
                 <tr>
@@ -59,8 +59,18 @@
                             <a href="{{ route('admin.users.edit', $user) }}" class="text-blue-600 hover:text-blue-800 transition duration-150">
                                 <i class="fa-solid fa-user-pen"></i>
                             </a>
-                            <button wire:click="deleteUser({{ $user->id }})" 
-                                    wire:confirm="¿Estás seguro de eliminar este usuario?"
+                            <button onclick="SwalCustom.fire({
+                                        title: '¿Eliminar Usuario?',
+                                        text: '¿Estás seguro de eliminar este usuario? Esta acción no se puede deshacer.',
+                                        icon: 'warning',
+                                        showCancelButton: true,
+                                        confirmButtonText: 'Sí, eliminar',
+                                        cancelButtonText: 'Cancelar'
+                                    }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            $wire.deleteUser({{ $user->id }});
+                                        }
+                                    })"
                                     class="text-red-600 hover:text-red-800 transition duration-150">
                                 <i class="fa-solid fa-trash-can"></i>
                             </button>

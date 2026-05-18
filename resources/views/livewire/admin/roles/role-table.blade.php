@@ -1,6 +1,6 @@
 <div>
 
-    <div class="relative overflow-x-auto shadow-xs rounded-base border border-gray-200">
+    <div class="relative overflow-x-auto rounded-base border-2 border-black">
         <table class="w-full text-sm text-left rtl:text-right text-gray-700">
             <thead class="text-xs uppercase" style="background-color: #fcfaf5;">
                 <tr>
@@ -35,8 +35,18 @@
                             <a href="{{ route('admin.roles.edit', $role) }}" class="text-blue-600 hover:text-blue-800 transition duration-150">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <button wire:click="deleteRole({{ $role->id }})" 
-                                    wire:confirm="¿Estás seguro de eliminar este rol?"
+                            <button onclick="SwalCustom.fire({
+                                        title: '¿Eliminar Rol?',
+                                        text: '¿Estás seguro de eliminar este rol? Esta acción no se puede deshacer.',
+                                        icon: 'warning',
+                                        showCancelButton: true,
+                                        confirmButtonText: 'Sí, eliminar',
+                                        cancelButtonText: 'Cancelar'
+                                    }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            $wire.deleteRole({{ $role->id }});
+                                        }
+                                    })"
                                     class="text-red-600 hover:text-red-800 transition duration-150">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
